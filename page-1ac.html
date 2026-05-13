@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Solution : 1x AC Horaire - Azizi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .table-boq thead { background-color: #fceaea; }
+    .boq-title { color: #ee0000; border-bottom: 2px solid #ee0000; padding-bottom: 5px; }
+  </style>
+</head>
+<body class="bg-light">
+  
+<nav class="navbar navbar-dark bg-dark mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="cat-horaire.html">← Retour aux solutions horaires</a>
+  </div>
+</nav>
+
+<div class="container pb-5">
+  <!-- Titre arrangé -->
+  <h2 class="fw-bold mb-4 text-uppercase">Contrôle Horaire - 1 Unité AC</h2>
+
+  <div class="row g-4">
+    <div class="col-lg-9">
+      
+      <!-- BULLE 1 : DESCRIPTION -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="fw-bold boq-title mb-3">Description de la Solution</h5>
+          <p class="text-muted">
+            Avec cette solution, grâce à un programmateur horaire, la climatisation fonctionne automatiquement selon un horaire hebdomadaire. 
+            Cela évite les oublis, réduit la consommation d’énergie et augmente la durée de vie de l’équipement. Par exemple, elle peut être programmée pour fonctionner du lundi au vendredi de 8h à 18h et rester arrêtée le week-end.
+            Cette solution est adaptée aux climatiseurs d'une puissance comprise entre 12 000 et 24 000 BTU.
+          </p>
+        </div>
+      </div>
+
+      <!-- BULLE 2 : DIAGRAMME -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold boq-title m-0">Diagramme Simplifié (1 AC)</h5>
+            <!-- Lien Canva supprimé -->
+          </div>
+          <div class="text-center p-3 border rounded bg-white">
+            <img src="img/Diagramme_Simplifié_Sol_1 (1).png" class="img-fluid" style="width: 50%;" onerror="this.src='https://via.placeholder.com/800x300?text=DIAGRAMME+1x+AC+PNG'">
+          </div>
+        </div>
+      </div>
+
+      <!-- BULLE 3 : SCHÉMA -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="fw-bold boq-title mb-3">Schéma de Câblage</h5>
+          <div class="row">
+            <div class="col-md-9">
+              <div class="border rounded bg-dark p-1">
+                <embed src="pdf/Sol_1_12k-24k.pdf#toolbar=0&navpanes=0" type="application/pdf" width="100%" height="400px" />
+              </div>
+            </div>
+            <div class="col-md-3 d-flex flex-column justify-content-center gap-2">
+              <a href="pdf/Sol_1_12k-24k.pdf" download="Sol_1_12k-24k_1xAC.pdf" class="btn btn-dark">Télécharger PDF</a>
+              <a href="dwg/Sol_1_one_AC.dwg" download class="btn btn-danger">Télécharger DWG</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BULLE 4 : BoQ -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold boq-title m-0">Liste du matériel (BoQ)</h5>
+            <!-- Modification : Bouton de téléchargement Excel local -->
+            <a href="excel/BoQ_Solution_1 (1).xlsx" download class="btn btn-success btn-sm">Télécharger BoQ (Excel)</a>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle table-boq">
+              <thead>
+                <tr>
+                  <th>MSF Code</th>
+                  <th>Description</th>
+                  <th>Commentaire</th>
+                  <th>Quantité</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PELEMCBS2B20M</td>
+                  <td><strong>Disjoncteur</strong><br><small>B20 6kA, 2P</small></td>
+                  <td>Protection principale du circuit contre surcharge et court-circuit.</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>PELECOMMTS216</td>
+                  <td><strong>Interrupteur Horaire Programmable</strong><br><small>16A, 250V, 7 jours, 1 sortie, modulaire</small></td>
+                  <td>Automatisation du démarrage/arrêt selon un horaire programmé.</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>PELECOMMC2263</td>
+                  <td><strong>Contacteur modulaire 63A</strong><br><small>2P 2NO, Bobine 230V AC, AC-7b 25A (Acti9 ICT)</small></td>
+                  <td>Commande de la puissance de la climatisation à partir du circuit de commande.</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>PELEVOLL230F</td>
+                  <td><strong>Commutateur de tension automatique AVS30</strong><br><small>30A, 230V, 50/60Hz</small></td>
+                  <td>Protection contre les variations de tension et délai de sécurité au redémarrage.</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td><strong>Interrupteur-Sectionneur en Coffret</strong><br><small>TeSys Vario (VBF), pour ON/OFF, 25A, 3P, IP65</small></td>
+                  <td>Coupure manuelle locale pour maintenance sécurisée.</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

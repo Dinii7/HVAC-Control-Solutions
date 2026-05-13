@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Solution : Shelly 1PM Gen 4 - Azizi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Couleur bleu clair assortie au thème Shelly */
+    .table-boq thead { background-color: #eaf2fc; } 
+    .boq-title { color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 5px; }
+    .badge-mode { font-size: 0.75rem; vertical-align: middle; margin-left: 10px; }
+    /* Style personnalisé pour le bouton assorti au tableau */
+    .btn-table-match {
+      background-color: #eaf2fc;
+      border: 1px solid #007bff;
+      color: #007bff;
+    }
+    .btn-table-match:hover {
+      background-color: #d1e3f9;
+      color: #0056b3;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-dark bg-dark mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="cat-shelly.html">← Retour aux solutions Shelly</a>
+  </div>
+</nav>
+
+<div class="container pb-5">
+  <h2 class="fw-bold mb-4 text-uppercase">Shelly 1PM Gen 4 - Gestion Connectée</h2>
+
+  <div class="row g-4">
+    <div class="col-lg-9">
+      
+      <!-- BULLE 1 : DESCRIPTION -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="fw-bold boq-title mb-3">Description de la Solution</h5>
+          <p class="text-muted">
+            Avec cette solution, grâce au Shelly 1PM Gen 4, la climatisation peut être pilotée à distance via une application (téléphone ou PC). Cela facilite un contrôle en temps réel, un suivi de la consommation d’énergie et une gestion plus flexible de l’équipement. Par exemple, l’unité peut être allumée ou éteinte à distance en fonction des besoins ou des conditions d’utilisation. Cette solution est adaptée aux climatiseurs d’une puissance comprise entre 12 000 et 18 000 BTU. Deux options d’installation sont possibles : soit dans une boîte de distribution, soit sur rail DIN grâce à un support imprimé en 3D spécialement conçu pour le Shelly.
+          </p>
+        </div>
+      </div>
+
+      <!-- BULLE 2 : DIAGRAMME -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body text-center">
+          <div class="d-flex justify-content-between align-items-center mb-3 text-start">
+            <h5 class="fw-bold boq-title m-0">Diagramme Simplifié</h5>
+          </div>
+          <img src="img/Diagramme_Simplifié_Gen4.png" class="img-fluid border rounded" style="width: 25%;" onerror="this.src='https://via.placeholder.com/800x300?text=DIAGRAMME+LOGIQUE+SHELLY'">
+        </div>
+      </div>
+
+      <!-- BULLE 3A : SCHÉMA MODE NORMAL (Encastré) -->
+      <div class="card shadow-sm mb-4 border-start border-info border-4">
+        <div class="card-body">
+          <h5 class="fw-bold boq-title mb-3">
+            Schéma : Installation Hors Tableau 
+            <span class="badge bg-info text-dark badge-mode">Boîte de Distribution</span>
+          </h5>
+          <div class="row">
+            <div class="col-md-9">
+              <div class="border rounded bg-dark p-1">
+                <embed src="pdf/Sol_4_SHELLY_12k-18k.pdf#toolbar=0&navpanes=0" type="application/pdf" width="100%" height="350px" />
+              </div>
+            </div>
+            <div class="col-md-3 d-flex flex-column justify-content-center gap-2 text-center">
+              <a href="pdf/Sol_4_SHELLY_12k-18k.pdf" download="Shelly_Gen4_Encastre.pdf" class="btn btn-dark btn-sm">Télécharger PDF</a>
+              <a href="dwg/Sol_4_SHELLY_GEN4_STANDARD.dwg" download class="btn btn-primary btn-sm">Télécharger DWG</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BULLE 3B : SCHÉMA MODE DIN HOLDER (Rail DIN) -->
+      <div class="card shadow-sm mb-4 border-start border-primary border-4">
+        <div class="card-body">
+          <h5 class="fw-bold boq-title mb-3">
+            Schéma : Installation sur Rail DIN 
+            <span class="badge bg-primary badge-mode">Support Tableau</span>
+          </h5>
+          <div class="row">
+            <div class="col-md-9">
+              <div class="border rounded bg-dark p-1">
+                <embed src="pdf/Sol_4_1_SHELLY_12k-18k.pdf#toolbar=0&navpanes=0" type="application/pdf" width="100%" height="350px" />
+              </div>
+            </div>
+            <div class="col-md-3 d-flex flex-column justify-content-center gap-2 text-center">
+              <a href="pdf/Sol_4_1_SHELLY_12k-18k.pdf" download="Shelly_Gen4_RailDIN.pdf" class="btn btn-dark btn-sm">Télécharger PDF</a>
+              <a href="dwg/Sol_4_SHELLY_GEN4_DIN_HOLDER.dwg" download class="btn btn-primary btn-sm">Télécharger DWG</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BULLE 4 : BoQ -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="fw-bold boq-title m-0">Liste du matériel (BoQ)</h5>
+            <div class="d-flex gap-2">
+              <a href="excel/BoQ_Shelly_Gen4 (1).xlsx" download class="btn btn-info btn-sm text-dark fw-bold">Excel (Hors Tableau)</a>
+              <a href="excel/BoQ_Shelly_Gen4_DIN (1).xlsx" download class="btn btn-sm btn-table-match fw-bold">Excel (Rail DIN)</a>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle table-boq">
+              <thead>
+                <tr>
+                  <th style="width: 15%;">MSF Code</th>
+                  <th style="width: 35%;">Description (FR)</th>
+                  <th style="width: 50%;">Commentaire</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PELEMCBS2B16M</td>
+                  <td><strong>Disjoncteur</strong><br><small>B16 6kA, 2P</small></td>
+                  <td>Protection principale du circuit contre surcharge et court-circuit.</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td><strong>SHELLY 1PM Gen4</strong><br><small>16A, 1 output, 110/240 V AC</small></td>
+                  <td>Permet le pilotage à distance et la mesure de la consommation électrique.</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td><strong>Support Rail DIN (Impression 3D)</strong><br><small>ABS ou PETG</small></td>
+                  <td>Support permettant le montage du Shelly sur rail DIN dans le coffret (alternative à la boîte de distribution).</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td><strong>RC SNUBBER</strong><br><small>100nF/100Ω</small></td>
+                  <td>Protection du Shelly contre les pics de tension (charge inductive).</td>
+                </tr>
+                <tr>
+                  <td>PELEVOLL230F</td>
+                  <td><strong>Commutateur AVS30</strong><br><small>30A, 230V</small></td>
+                  <td>Protection contre les variations de tension et délai de sécurité.</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td><strong>Interrupteur-Sectionneur</strong><br><small>TeSys Vario IP65</small></td>
+                  <td>Coupure manuelle locale pour maintenance sécurisée.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
